@@ -27,7 +27,7 @@ def get_mastery_champions(server, player, driver):
         if try_to_find_element(driver, xpath, 'xpath'):
             champions.append(driver.find_element_by_xpath(xpath).text)
         else:
-            exit('Deu erro na porra da mastery')
+            exit('Deu erro na mastery')
 
     return champions
 
@@ -51,7 +51,7 @@ def get_player_status(server, player, driver):
             stats[10].text
         ]
     else:
-        exit('Deu erro na porra dos stats')
+        exit('Deu erro nos stats')
 
 
 def get_player_elo(server, player, driver, elo):

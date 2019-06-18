@@ -1,6 +1,5 @@
 import pandas as pd
 import random as rn
-from verify_data.label_encoder import LabelEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import ExtraTreeClassifier
@@ -15,15 +14,15 @@ from sklearn.naive_bayes import GaussianNB
 
 
 RANDOM_STATE = 30
-LABEL_ENCODER = LabelEncoder()
+
 
 # Load dataset from CSV
 df = pd.read_csv('../clean_dataset.csv')
-df = df.drop(['games', 'pentakills'], axis=1)
+df = df.drop(['damange'], axis=1)
 
 
 # Set seed
-rn.seed = RANDOM_STATE
+rn.seed(RANDOM_STATE)
 
 
 # Select some values for validation
